@@ -137,9 +137,16 @@ body {
 }
 
 #enter {
+  background-color: #ffddc1;
   grid-area: enter;
   grid-column: 3/4;
   grid-row: 5/6;
+  box-shadow: #ffddc1 3px 3px;
+}
+
+#enter:active {
+  box-shadow: none;
+  transform: translateY(2px);
 }
 
 .footer {
