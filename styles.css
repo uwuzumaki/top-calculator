@@ -54,12 +54,21 @@ body {
   box-shadow: #6ab7ff 3px 3px;
 }
 
-.clear-button {
+.remove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 90%;
+}
+
+.clear-button {
   padding: 5px 0;
-  border-style: solid;
-  border-color: black;
-  border-width: 3px;
+  flex: 1;
+}
+
+.del-button {
+  padding: 5px 0;
+  flex: 1;
 }
 
 .button-container {

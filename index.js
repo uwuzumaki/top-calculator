@@ -28,14 +28,23 @@ buttons.forEach((button) => {
   const display = document.querySelector(".display");
   button.addEventListener("click", (e) => {
     const buttonPressed = e.target.id;
-    console.log(buttonPressed);
     if (button.classList.contains("clear-button")) {
       displayValue = "";
       storedValue = "";
       storedOperator = "";
       display.innerHTML = "0";
+    } else if (button.classList.contains("del-button")) {
+      displayValue = displayValue.slice(0, -1);
+      if (displayValue.charAt(displayValue.length - 1) === ".") {
+        displayValue = displayValue.slice(0, -1);
+        display.innerHTML = displayValue;
+      }
+      if (displayValue === "") {
+        display.innerHTML = "0";
+      } else {
+        display.innerHTML = displayValue;
+      }
     } else if (button.classList.contains("number")) {
-      console.log(displayValue);
       if (displayValue.length < 12) {
         if (buttonPressed === "decimal") {
           if (!displayValue.includes(".")) {
